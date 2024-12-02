@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buscar Restaurantes</title>
+  <link href="../css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+  <nav id="navbar">
+    <ul>
+      <li><a href="index.html">Restaurantes</a></li>
+      <li><a href="imagenes.html">Buscar Imágenes</a></li>
+      <li> <button id="cerrarSesion">Cerrar Sesion</button></li>
+    </ul>
+  </nav>
+
+  <h1>Buscar Restaurantes</h1>
+  <input id="search-box" type="text" placeholder="Buscar restaurantes...">
+  <div id="map"></div>
+
+  <div id="restaurant-info">
+    <h2>Detalles del Restaurante</h2>
+    <p id="restaurant-name">Nombre: No disponible</p>
+    <p id="restaurant-address">Dirección: No disponible</p>
+    <p id="restaurant-phone">Teléfono: No disponible</p>
+    <p id="restaurant-hours">Horario: No disponible</p>
+
+    <div id="photo-gallery">
+      <p>No hay fotos disponibles</p>
+    </div> <br> <br>
+    <h2>Pronóstico del Clima del Restaurante(Próximos 3 días)</h2>
+    <div class="forecast-container" id="forecast-container">
+      <!-- El pronóstico se renderizará aquí -->
+    </div>
+  </div>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkUTiatP6i0fqu_ys5PYJ_F3kC3yXd-Nc&libraries=places&callback=initMap"
+    async defer></script>
+  <script src="../js/index.js"></script>
+  <script src="../js/diseño.js"></script>
+  <script type="module" src="../js/cerrar_sesion.js"></script>
+  <script type="module" src="../js/validacion_cierre.js"></script>
+</body>
+</html>

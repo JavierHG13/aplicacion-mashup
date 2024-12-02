@@ -1,0 +1,283 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2.5rem;
+    color: #9b1e36;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#search-box {
+    width: 60%;
+    padding: 10px;
+    margin: 30px auto;
+    display: block;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    border: 2px solid #ccc;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+#search-box:focus {
+    border-color: #680c2f;
+    box-shadow: 0 4px 20px rgba(104, 12, 47, 0.5);
+}
+
+
+#map {
+    width: 80%;
+    height: 400px;
+    margin: 30px auto;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+#map:hover {
+    transform: scale(1.05);
+}
+
+
+#restaurant-info {
+    width: 80%;
+    margin: 50px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+#restaurant-info h2 {
+    font-size: 2rem;
+    color: #9b1e36;
+    margin-bottom: 20px;
+}
+
+#restaurant-info p {
+    font-size: 1.1rem;
+    margin: 10px 0;
+    color: #666;
+}
+
+
+#photo-gallery {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+#photo-gallery img {
+    width: 100%;        
+    max-width: 200px;  
+    height: auto;          
+    aspect-ratio: 3/2;      
+    border-radius: 8px;      
+    margin-bottom: 15px;    
+    transition: transform 0.3s ease; 
+}
+
+
+#photo-gallery img:hover {
+    transform: scale(1.05);
+}
+
+
+.forecast-container {
+    margin-top: 100px; 
+}
+
+.forecast-container h3 {
+    font-size: 1.8rem;
+    color: #9b1e36;
+    margin-bottom: 20px;
+}
+
+
+.tarjeta-pronostico img {
+    width: 100px;  
+    height: 100px; 
+    object-fit: cover; 
+    border-radius: 50%; 
+    margin-bottom: 10px;
+}
+
+.tarjeta-pronostico {
+    background: #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    text-align: center;
+    margin: 10px;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.tarjeta-pronostico:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.tarjeta-pronostico h4 {
+    font-size: 1.2rem;
+    color: #9b1e36;
+    margin: 10px 0;
+}
+
+.tarjeta-pronostico p {
+    font-size: 1rem;
+    color: #666;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#search-box, #restaurant-info, #photo-gallery, .forecast-container {
+    animation: fadeIn 1s ease-out;
+}
+
+#search-box {
+    animation-delay: 0.5s;
+}
+
+#restaurant-info {
+    animation-delay: 1s;
+}
+
+#photo-gallery {
+    animation-delay: 1.5s;
+}
+
+.forecast-container {
+    animation-delay: 2s;
+}
+
+.card {
+    background: white;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+img {
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.05);
+}
+
+#navbar {
+    background-color: #680c2f;
+    padding: 30px 60px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+#navbar button{
+    background-color: #680c2f; 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    outline: none; 
+}
+
+#navbar button:hover{
+  
+    color: #e0a1a1;  
+    transform: scale(1.1);
+}
+
+#navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+#navbar ul li {
+    margin: 0 15px;
+}
+
+#navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+#navbar ul li a:hover {
+    color: #e0a1a1; 
+    transform: scale(1.1);
+}
+
+
+#restaurant-section {
+    margin-top: 60px; 
+    padding: 20px;
+}
+
+
+#image-search {
+    margin-top: 60px; 
+    padding: 20px;
+}
+
+
+
+@media (max-width: 768px) {
+    #search-box {
+        width: 80%;
+    }
+
+    #map {
+        width: 100%;
+        height: 300px;
+    }
+
+    #restaurant-info, #photo-gallery, .forecast-container {
+        width: 90%;
+    }
+}
